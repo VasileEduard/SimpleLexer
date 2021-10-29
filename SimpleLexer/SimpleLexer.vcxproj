@@ -145,7 +145,7 @@
     <ClCompile Include="SimpleLexer.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="simplec.lex" />
+    <Text Include="simplec.lex" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

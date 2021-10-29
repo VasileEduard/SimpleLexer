@@ -25,6 +25,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="simplec.lex" />
+    <Text Include="simplec.lex">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
