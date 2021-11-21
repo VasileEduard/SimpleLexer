@@ -86,7 +86,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;YY_NO_UNISTD_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -139,13 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="c.tab.h" />
     <ClInclude Include="symbols.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="c.tab.c" />
+    <ClCompile Include="lex.yy.c" />
     <ClCompile Include="SimpleLexer.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="simplec.lex" />
+    <Text Include="input.csrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="c.y" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

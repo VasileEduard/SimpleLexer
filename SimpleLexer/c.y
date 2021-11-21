@@ -1,0 +1,152 @@
+%{
+#include <stdio.h>
+
+int yyerror(char * s);
+extern int yylex(void);
+%}
+
+%token ANCHOR 
+%token BILLBOARD
+%token COLLISION
+%token GROUP
+%token INLINE
+%token LOD
+%token SWITCH
+%token TRANSFORM
+%token BACKGROUND
+%token FOG
+%token NAVIGATIONINFO
+%token VIEWPOINT
+%token DIRECTIONALLIGHT
+%token POINTLIGHT
+%token SPOTLIGHT
+%token SCRIPT
+%token SHAPE
+%token SOUND
+%token WORLDINFO
+%token CYLINDERSENSOR
+%token PLANESENSOR
+%token PROXIMITYSENSOR
+%token SPHERESENSOR
+%token TIMESENSOR
+%token TOUCHSENSOR
+%token VISIBILITYSENSOR
+%token COLORINTERPOLATOR
+%token COORDINATEINTERPOLATOR
+%token NORMALINTERPOLATOR
+%token ORIENTATIONINTERPOLATOR
+%token POSITIONINTERPOLATOR
+%token SCALARINTERPOLATOR
+%token APPEARANCE
+%token AUDIOCLIP
+%token FONTSTYLE
+%token BOX
+%token CONE
+%token CYLINDER
+%token ELEVATIONGRID
+%token EXTRUSION
+%token INDEXEDFACESET
+%token INDEXEDLINESET
+%token POINTSET
+%token SPHERE
+%token TEXT
+%token COLOR
+%token COORDINATE
+%token NORMAL
+%token TEXTURECOORDINATE
+%token IMAGETEXTURE
+%token MATERIAL
+%token MOVIETEXTURE
+%token PIXELTEXTURE
+%token TEXTURETRANSFORM
+%token END
+%token IDENTIFIER
+
+%start program_unit
+%%
+program_unit 
+	: declaration
+	| program_unit declaration
+	;
+
+declaration
+	:function_definition
+	| var_declaration
+	;
+
+function_definition
+	: type_specifier IDENTIFIER 
+	;
+
+type_specifier
+	: ANCHOR
+	| BILLBOARD
+	| COLLISION
+	| GROUP
+	| INLINE
+	| LOD
+	| SWITCH
+	| TRANSFORM
+	| BACKGROUND
+	| FOG
+	| NAVIGATIONINFO
+	| VIEWPOINT
+	| DIRECTIONALLIGHT
+	| POINTLIGHT
+	| SPOTLIGHT
+	| SCRIPT
+	| SHAPE
+	| SOUND
+	| WORLDINFO
+	| CYLINDERSENSOR
+	| PLANESENSOR
+	| PROXIMITYSENSOR
+	| SPHERESENSOR
+	| TIMESENSOR
+	| TOUCHSENSOR
+	| VISIBILITYSENSOR
+	| COLORINTERPOLATOR
+	| COORDINATEINTERPOLATOR
+	| NORMALINTERPOLATOR
+	| ORIENTATIONINTERPOLATOR
+	| POSITIONINTERPOLATOR
+	| SCALARINTERPOLATOR
+	| APPEARANCE
+	| AUDIOCLIP
+	| FONTSTYLE
+	| BOX
+	| CONE
+	| CYLINDER
+	| ELEVATIONGRID
+	| EXTRUSION
+	| INDEXEDFACESET
+	| INDEXEDLINESET
+	| POINTSET
+	| SPHERE
+	| TEXT
+	| COLOR
+	| COORDINATE
+	| NORMAL
+	| TEXTURECOORDINATE
+	| IMAGETEXTURE
+	| MATERIAL
+	| MOVIETEXTURE
+	| PIXELTEXTURE
+	| TEXTURETRANSFORM
+	| END
+	| IDENTIFIER
+	|
+	;
+
+var_declaration
+	: type_specifier IDENTIFIER
+	| 
+	;
+
+%% int yyeror(char * s)
+/* yacc error handler */
+{
+printf ("%s\n", s);
+}
+
+

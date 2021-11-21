@@ -716,7 +716,7 @@ char *yytext;
 #line 1 "simplec.lex"
 #line 9 "simplec.lex"
 #include <stdio.h>
-#include "symbols.h"
+#include "c.tab.h"
 
 void count();
 #line 722 "lex.yy.c"

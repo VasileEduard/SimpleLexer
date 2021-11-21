@@ -18,9 +18,18 @@
     <ClInclude Include="symbols.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="c.tab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SimpleLexer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lex.yy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="c.tab.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -28,5 +37,13 @@
     <Text Include="simplec.lex">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="input.csrc">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="c.y">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

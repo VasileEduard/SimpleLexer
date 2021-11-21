@@ -1,6 +1,6 @@
 #ifndef __SYMBOLS_H__
 #define __SYMBOLS_H__
-#define ANCHOR 0
+#define ANCHOR 54
 #define	BILLBOARD 1
 #define	COLLISION 2
 #define	GROUP 3
@@ -54,5 +54,7 @@
 #define	MOVIETEXTURE 51
 #define	PIXELTEXTURE 52
 #define	TEXTURETRANSFORM 53
+#define END 0
+#define IDENTIFIER 55
 
 #endif
