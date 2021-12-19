@@ -1,10 +1,19 @@
 %{
 #include <stdio.h>
+#include "ast.h"
 
+Node* astRoot = NULL;
 int yyerror(char * s);
 extern int yylex(void);
-%}
 
+%}
+%union{	
+	Node	*node;
+	char* strings;
+	int intVal;
+	float floatVal;
+	double dVal;
+}
 %token ANCHOR 
 %token BILLBOARD
 %token COLLISION
@@ -62,6 +71,40 @@ extern int yylex(void);
 %token END
 %token IDENTIFIER
 
+
+%type <node> vrmlScene
+%type <node> statements
+%type <node> statement
+%type <node> nodeStatement
+%type <node> protoStatement
+%type <node> protoStatements
+%type <node> proto
+%type <node> protoBody
+%type <node> interfaceDeclarations
+%type <node> restrictedInterfaceDeclaration
+%type <node> interfaceDeclaration
+%type <node> externproto
+%type <node> externInterfaceDeclarations
+%type <node> externInterfaceDeclaration
+%type <node> routeStatement
+%type <node> fieldType
+%type <node> fieldValue
+
+%type <node> node
+%type <node> nodeBody
+%type <node> scriptBody
+%type <node> scriptBodyElement
+%type <node> nodeBodyElement
+%type <node> nodeNameIDENTIFIER
+%type <node> nodeTypeIDENTIFIER
+%type <node> fieldIDENTIFIER
+%type <node> eventInIDENTIFIER
+%type <node> eventOutIDENTIFIER
+%type <node> IDENTIFIER
+%type <node> IDENTIFIERFirstChar
+%type <node> IDENTIFIERRestChars
+
+
 %start vrmlScene
 %%
 vrmlScene :
@@ -116,7 +159,7 @@ routeStatement :
 empty :
 	;
 
-
+	
 node :
 	nodeTypeIDENTIFIER { nodeBody } |
 	Script { scriptBody } ;

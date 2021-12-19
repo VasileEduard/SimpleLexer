@@ -21,6 +21,15 @@
     <ClInclude Include="c.tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\ast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\SemanticAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\SymbolsList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SimpleLexer.c">
@@ -30,6 +39,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="c.tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\ast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\SemanticAnalyzer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\lexexampleV2\LexExamplev2\SymbolsList.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="c.y">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cVRML.y">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
