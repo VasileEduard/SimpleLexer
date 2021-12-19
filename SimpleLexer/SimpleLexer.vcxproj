@@ -152,6 +152,7 @@
     <ClCompile Include="c.tab.c" />
     <ClCompile Include="lex.yy.c" />
     <ClCompile Include="SimpleLexer.c" />
+    <ClCompile Include="input.csrc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="simplec.lex" />
